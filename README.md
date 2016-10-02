@@ -35,7 +35,7 @@ NSString *account = [YCKeyChainCacheTool loadCacheValueForKey:@"account"];
 
  - delete the password from the keyChain 
 ```
-[self deleteCacheValueForKey:@"account"];
+[YCKeyChainCacheTool deleteCacheValueForKey:@"account"];
 ```
 **Note**
 In this class ,if you want share data among applicationsyou have to use your own developer ID to replace the string (`#define accessGroupItem @"W89ABTKW89.wenyuchao.GenericKeychainSuite"`) . 
