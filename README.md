@@ -30,7 +30,7 @@ It is very easy to use.Just like this.
 ```
  - get the password from the keyChain 
 ```
-NSString *account = [XSLKeyChainCacheTool loadCacheValueForKey:@"account"];
+NSString *account = [YCKeyChainCacheTool loadCacheValueForKey:@"account"];
 ```
 
  - delete the password from the keyChain 

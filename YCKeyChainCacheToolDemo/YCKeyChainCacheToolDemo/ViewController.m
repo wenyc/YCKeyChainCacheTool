@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YCKeyChainCacheTool.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    /* NOTE:if you want test this example ,please use iphone instead iphone simulator */
+    
+    //-------------------save-----------------------
+    [self savePasswordToKeychain];
+    [self getPasswordFromKeychain];
+    
+    //------------------delete----------------------
+//    [self deletePasswordFromkeychian];
+//    [self getPasswordFromKeychain];
 }
 
+- (void)savePasswordToKeychain {
+    NSString *password = @"w123456";
+    NSString *userNameKey = @"Mr.wen";
+    [YCKeyChainCacheTool cacheValue:password forKey:userNameKey];
+}
 
+- (void)getPasswordFromKeychain {
+    NSString *userNameKey = @"Mr.wen";
+    NSString *password = [YCKeyChainCacheTool loadCacheValueForKey:userNameKey];
+    NSLog(@"the user`s password is %@",password);
+}
+
+- (void)deletePasswordFromkeychian {
+    NSString *userNameKey = @"Mr.wen";
+    [YCKeyChainCacheTool deleteCacheValueForKey:userNameKey];
+}
 @end

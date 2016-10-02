@@ -15,6 +15,8 @@
 		242D404C1D9EB617000B7892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242D404A1D9EB617000B7892 /* LaunchScreen.storyboard */; };
 		242D40571D9EB617000B7892 /* YCKeyChainCacheToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D40561D9EB617000B7892 /* YCKeyChainCacheToolDemoTests.m */; };
 		242D40621D9EB617000B7892 /* YCKeyChainCacheToolDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242D40611D9EB617000B7892 /* YCKeyChainCacheToolDemoUITests.m */; };
+		24578AAE1DA0BC4A001B923C /* YCKeyChainCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 24578AAD1DA0BC4A001B923C /* YCKeyChainCacheTool.m */; };
+		24B9258C1DA0C2FE003F2112 /* KeychainAccessGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24B9258B1DA0C2FE003F2112 /* KeychainAccessGroups.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		242D405D1D9EB617000B7892 /* YCKeyChainCacheToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCKeyChainCacheToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242D40611D9EB617000B7892 /* YCKeyChainCacheToolDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCKeyChainCacheToolDemoUITests.m; sourceTree = "<group>"; };
 		242D40631D9EB617000B7892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24578AAC1DA0BC4A001B923C /* YCKeyChainCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCKeyChainCacheTool.h; sourceTree = "<group>"; };
+		24578AAD1DA0BC4A001B923C /* YCKeyChainCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCKeyChainCacheTool.m; sourceTree = "<group>"; };
+		24B9258B1DA0C2FE003F2112 /* KeychainAccessGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeychainAccessGroups.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		242D40301D9EB617000B7892 = {
 			isa = PBXGroup;
 			children = (
+				24578AAB1DA0BC4A001B923C /* YCKeyChainCacheTool */,
 				242D403B1D9EB617000B7892 /* YCKeyChainCacheToolDemo */,
 				242D40551D9EB617000B7892 /* YCKeyChainCacheToolDemoTests */,
 				242D40601D9EB617000B7892 /* YCKeyChainCacheToolDemoUITests */,
@@ -110,6 +116,7 @@
 				242D404A1D9EB617000B7892 /* LaunchScreen.storyboard */,
 				242D404D1D9EB617000B7892 /* Info.plist */,
 				242D403C1D9EB617000B7892 /* Supporting Files */,
+				24B9258B1DA0C2FE003F2112 /* KeychainAccessGroups.plist */,
 			);
 			path = YCKeyChainCacheToolDemo;
 			sourceTree = "<group>";
@@ -138,6 +145,15 @@
 				242D40631D9EB617000B7892 /* Info.plist */,
 			);
 			path = YCKeyChainCacheToolDemoUITests;
+			sourceTree = "<group>";
+		};
+		24578AAB1DA0BC4A001B923C /* YCKeyChainCacheTool */ = {
+			isa = PBXGroup;
+			children = (
+				24578AAC1DA0BC4A001B923C /* YCKeyChainCacheTool.h */,
+				24578AAD1DA0BC4A001B923C /* YCKeyChainCacheTool.m */,
+			);
+			path = YCKeyChainCacheTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +267,7 @@
 			files = (
 				242D404C1D9EB617000B7892 /* LaunchScreen.storyboard in Resources */,
 				242D40491D9EB617000B7892 /* Assets.xcassets in Resources */,
+				24B9258C1DA0C2FE003F2112 /* KeychainAccessGroups.plist in Resources */,
 				242D40471D9EB617000B7892 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +295,7 @@
 			files = (
 				242D40441D9EB617000B7892 /* ViewController.m in Sources */,
 				242D40411D9EB617000B7892 /* AppDelegate.m in Sources */,
+				24578AAE1DA0BC4A001B923C /* YCKeyChainCacheTool.m in Sources */,
 				242D403E1D9EB617000B7892 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -440,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -453,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -466,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -478,6 +500,7 @@
 		242D406D1D9EB617000B7892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -490,6 +513,7 @@
 		242D406E1D9EB617000B7892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = YCKeyChainCacheToolDemo/KeychainAccessGroups.plist;
 				DEVELOPMENT_TEAM = W89ABTKW89;
 				INFOPLIST_FILE = YCKeyChainCacheToolDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
